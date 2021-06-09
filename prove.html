@@ -21,10 +21,10 @@
         const myURL1 = 'https://bitbucket.org/d4t4w1z4rd/chart-fe/raw/add693bff4b6385545b842190f44b7b0dc05022b/data-close-orders.json'
         const myURL2 = 'https://bitbucket.org/d4t4w1z4rd/chart-fe/raw/add693bff4b6385545b842190f44b7b0dc05022b/data-open-orders.json'
 
-        const labels = JSON.stringify(myURL, function (a) {
+        const labels = JSON.stringify(myURL1, function (a) {
             return a.x;
         });
-        const data = JSON.stringify(myURL, function (a) {
+        const data = JSON.stringify(myURL1, function (a) {
             return a.y;
         });
 
