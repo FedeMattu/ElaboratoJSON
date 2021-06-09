@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<script src="prova.js"></script>
+
+<body>
+    <canvas id="canvas" style="width:100%;max-width:1000"></canvas>
+
+
+    <button>Vai</button>
+
+    <div></div>
+
+
+
+
+    
+    <script>
+        const myURL = 'https://bitbucket.org/d4t4w1z4rd/chart-fe/raw/add693bff4b6385545b842190f44b7b0dc05022b/data-close-orders.json'
+
+        const labels = JSON.stringify(myURL, function (a) {
+            return a.x;
+        });
+        const data = JSON.stringify(myURL, function (a) {
+            return a.y;
+        });
+
+
+        const ctx = canvas.getContext('2d');
+        const config = {
+            type: 'line',
+            data: data,
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        position: 'top',
+                    },
+                    title: {
+                        display: true,
+                        text: 'Chart.js Line Chart'
+                    }
+                }
+            },
+        };
+        const chart = new Chart(ctx, config);
+    </script>
+
+
+</body>
+
+</html>
